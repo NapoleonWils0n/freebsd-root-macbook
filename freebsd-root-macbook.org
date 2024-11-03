@@ -914,9 +914,9 @@ kern.ipc.shm_allow_removed=1
 # change reponsiveness from server to desktop
 kern.sched.preempt_thresh=224
 # screen brightness
-hw.acpi.video.lcd0.economy=50
-hw.acpi.video.lcd0.fullpower=100
-hw.acpi.video.lcd0.brightness=100
+#hw.acpi.video.lcd0.economy=50
+#hw.acpi.video.lcd0.fullpower=100
+#hw.acpi.video.lcd0.brightness=100
 # usb keyboard media keys
 hw.usb.usbhid.enable=1
 # suspend
