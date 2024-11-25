@@ -68,6 +68,9 @@ net.fibs=2
 asmc_load="YES"
 # fix for hdac0 errors
 compat.linuxkpi.i915_disable_power_well="0"
+# ralink wifi
+if_run_load="YES"
+runfw_load="YES"
 #+END_SRC
 
 **** loader.conf tangle
@@ -755,7 +758,6 @@ clear_tmp_enable="YES"
 syslogd_flags="-ss"
 hostname="macbook"
 keymap="uk.macbook.kbd"
-#ifconfig_ue0="DHCP"
 local_unbound_enable="YES"
 sshd_enable="NO"
 moused_enable="NO"
@@ -797,12 +799,15 @@ devfs_system_ruleset="localrules"
 
 # laggo failover device
 # ethernet mac address set to wifi mac address
-ifconfig_ue0="68:5b:35:b9:ef:7d"
+ifconfig_ue0="ether 00:c0:ca:32:9c:f4"
 wlans_run0="wlan0"
 ifconfig_wlan0="WPA"
 create_args_wlan0="country GB"
 cloned_interfaces="lagg0"
 ifconfig_lagg0="up laggproto failover laggport ue0 laggport wlan0 DHCP"
+
+# wired
+#ifconfig_ue0="DHCP"
 
 # ralink wifi
 #wlans_run0="wlan0"
